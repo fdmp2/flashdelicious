@@ -9,32 +9,49 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Flash Delicious Brand Colors */
+    --flash-red: 5 81% 53%;          /* #E6362D */
+    --flash-green: 149 83% 32%;      /* #0E9343 */
+    --flash-yellow: 47 100% 59%;     /* #FFDA2D */
+    --flash-white: 0 0% 100%;        /* #FFFFFF */
+    --flash-black: 0 0% 0%;          /* #000000 */
+    
+    /* Semantic mappings */
+    --primary: var(--flash-green);
+    --primary-foreground: var(--flash-white);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--flash-red);
+    --secondary-foreground: var(--flash-white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: var(--flash-yellow);
+    --accent-foreground: var(--flash-black);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 120 20% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: var(--flash-red);
+    --destructive-foreground: var(--flash-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 120 20% 90%;
+    --input: 120 20% 95%;
+    --ring: var(--flash-green);
+
+    /* Custom gradients */
+    --gradient-fresh: linear-gradient(135deg, hsl(var(--flash-green)), hsl(var(--flash-yellow)));
+    --gradient-tropical: linear-gradient(135deg, hsl(var(--flash-red)), hsl(var(--flash-yellow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--flash-green) / 0.1), hsl(var(--flash-yellow) / 0.1));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--flash-green) / 0.1);
+    --shadow-hover: 0 8px 30px hsl(var(--flash-green) / 0.2);
 
     --radius: 0.5rem;
 
